@@ -1,12 +1,17 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Html, Head,  NextScript } from 'next/document'
+import Card from './Card'
 
 export default function Document() {
   return (
     <Html lang="en">
       <Head />
       <body>
-        <Main />
+       <div className='flex '>
         <NextScript />
+       {/* <Card/>
+       <Card/> */}
+
+       </div>
       </body>
     </Html>
   )

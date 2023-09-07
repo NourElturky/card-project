@@ -16,12 +16,32 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base{
+  .my-swiper .swiper-button-next,
+.my-swiper .swiper-button-prev { 
+  @apply w-8 h-8 bg-gray-300 rounded-full text-white 
 }
+
+.my-swiper-button-next:after, .my-swiper-rtl .swiper-button-prev:after {
+  font-size: 16px
+}
+
+.my-swiper .swiper-pagination-bullet-active {
+  background-color:#4cb087
+}
+
+
+}
+
+.swiper-button-next::after, .swiper-rtl .swiper-button-prev::after {
+  font-size: 16px !important;
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+  font-size: 16px !important;
+
+}
+
+
+
+  
