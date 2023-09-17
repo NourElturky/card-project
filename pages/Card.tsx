@@ -11,7 +11,7 @@ import { HiShare } from 'react-icons/hi';
 import { PiLinkSimpleBold } from 'react-icons/pi';
 
 import { useState,useEffect} from 'react';
-// import data from "./UnitsData.json"
+import Link from 'next/link';
 
  export interface CardProps {
   title: string;
@@ -195,10 +195,10 @@ const Card: React.FC<CardProps> = (
         <a href="/" className="grid duration-300 cursor-pointer w-9 place-content-center fill-fill-icons hover:fill-text-[#4cb087]">
         <BsTelephoneFill className="w-5 h-5 duration-300  text-[#4cb087]"/>
         </a> 
-          <a href="/"
+          <Link href="/"
            className="grid text-center duration-300 cursor-pointer w-9 place-content-center ">
             <BsWhatsapp className="w-6 h-6 duration-300 text-[#4cb087]"/>
-          </a>
+          </Link>
 
 
           <div className=''>
