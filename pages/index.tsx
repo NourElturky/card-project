@@ -1,11 +1,9 @@
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Card from './Card'
-import { useState } from 'react'
-
-
-
+import { useState,useEffect } from 'react'
 const inter = Inter({ subsets: ['latin'] })
+
+
 
 export default function Home() {
   const [cards, setCards] = useState([
@@ -14,13 +12,14 @@ export default function Home() {
     
   ]);
 
-
+ 
+  
   return (
-
      <div>
-
       {cards.map((card, index) => (
-        <Card key={index} title={card.title} address={card.address}  price={card.price} payment={card.payment} month={card.month} bedroom={card.bedroom} bathroom={card.bathroom}  area={card.area} uaddress={card.uaddress}  />
+        <Card key={index}  
+        {...card} 
+         />
       ))}
     </div>
 

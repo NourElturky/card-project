@@ -38,16 +38,8 @@
 // export default ImageSlider;
 
 
-
-
-
-
-
-
-
-
-
 import React from 'react';
+import Image from 'next/image'
 
 import { Navigation, Pagination, Scrollbar, A11y,EffectCreative} from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -83,7 +75,7 @@ const ImageSlider: React.FC <ImageSliderProps>= ({images}) => {
     >
       {images.map((image, index) => (
         <SwiperSlide key={index}>
-            <img src={image} alt={image} className=' rounded-lg '/>
+            <Image src={image} alt={image} width={500} height={300} className=' rounded-lg '/>
         </SwiperSlide>
       ))}
     </Swiper>

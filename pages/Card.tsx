@@ -10,10 +10,10 @@ import { MdCompare } from 'react-icons/md';
 import { HiShare } from 'react-icons/hi';
 import { PiLinkSimpleBold } from 'react-icons/pi';
 
-import { useState } from 'react';
+import { useState,useEffect} from 'react';
+// import data from "./UnitsData.json"
 
-
-interface CardProps {
+ export interface CardProps {
   title: string;
   address: string;
   price:number
@@ -26,8 +26,11 @@ interface CardProps {
 }
 
 
-const Card: React.FC<CardProps> = ({ title, address,price, payment,month,bedroom,bathroom,area,uaddress}) => {
+const Card: React.FC<CardProps> = (
+  { title, address,price, payment,month,bedroom,bathroom,area,uaddress}
+  ) => {
   
+
   const imageUrls = [
     '/images/image2.jpg',
     '/images/image1.jpg',
@@ -51,6 +54,8 @@ const Card: React.FC<CardProps> = ({ title, address,price, payment,month,bedroom
     setShowMessage(!showMessage);
   };
 
+
+ 
   return (
     <div className="relative bg-white shadow rounded-lg w-[30%] mt-20 ml-20">
        
@@ -97,12 +102,13 @@ const Card: React.FC<CardProps> = ({ title, address,price, payment,month,bedroom
     {/* end image */}
 
 
+        
     <div className=' '>
     <div className="flex items-center w-full px-5 py-3 bg-gray-90">
       <p
         className="min-w-[50%] text-xs font-medium text-black "
       >
-        {title}
+       {title}
      
       </p>
       <p className="min-w-[50%] text-xs font-medium text-black ">
@@ -118,13 +124,11 @@ const Card: React.FC<CardProps> = ({ title, address,price, payment,month,bedroom
             </span>
             <div className="text-lg font-bold text-black">
               {price}
-              {/* price 20000000000000 */}
               <span className="text-sm"> EGP</span>
             </div>
           </div>
           <span className="text-[10px] sm:text-xs font-normal   text-black/60">
             {address}
-            {/* title */}
           </span>
         </div>
         <div className="space-y-1">
@@ -134,14 +138,12 @@ const Card: React.FC<CardProps> = ({ title, address,price, payment,month,bedroom
             </span>
             <div className="text-lg font-bold text-black">
               {payment}
-              {/* payment */}
               <span className="text-sm"> EGP</span>
             </div>
           </div>
            <span className="text-[10px] sm:text-xs font-normal  text-black/60">
             <span className="font-bold">
               {month}
-              {/* month */}
               </span>
             Monthly / 7 Years
           </span> 
@@ -154,7 +156,6 @@ const Card: React.FC<CardProps> = ({ title, address,price, payment,month,bedroom
           <span className="flex text-gray-400">
             <GrLocation className="text-gray-400"/>
             {uaddress}
-            {/* address */}
             </span>
         </div>
       </div>
@@ -167,7 +168,6 @@ const Card: React.FC<CardProps> = ({ title, address,price, payment,month,bedroom
           </div>
           <span className="text-sm font-medium uppercase text-text-gray">
             {bedroom}
-            {/* bedroom */}
           </span>
         </div>
         <div className="flex items-center gap-x-4">
@@ -177,7 +177,6 @@ const Card: React.FC<CardProps> = ({ title, address,price, payment,month,bedroom
           </div>
           <span className="text-sm font-medium uppercase text-text-gray ">
             {bathroom}
-            {/* bathroom */}
           </span>
         </div>
         <div className="flex items-center gap-x-4">
@@ -186,7 +185,6 @@ const Card: React.FC<CardProps> = ({ title, address,price, payment,month,bedroom
           </div>
           <span className="text-sm font-medium uppercase truncate text-text-gray">
             {area} 
-            {/* area */}
               m <sup>2</sup>
           </span>
         </div>
@@ -230,7 +228,9 @@ const Card: React.FC<CardProps> = ({ title, address,price, payment,month,bedroom
     </div>
   </div>
   </div>
+  
   );
+  
 };
 
 export default Card;
