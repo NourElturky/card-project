@@ -192,9 +192,9 @@ const Card: React.FC<CardProps> = (
     
      <div className="flex flex-col w-full gap-5 px-6 ">
       <div className="flex items-center justify-around w-full py-4 mt-3 border-t border-solid border-border-top ">
-        <a href="/" className="grid duration-300 cursor-pointer w-9 place-content-center fill-fill-icons hover:fill-text-[#4cb087]">
+        <Link href="/" className="grid duration-300 cursor-pointer w-9 place-content-center fill-fill-icons hover:fill-text-[#4cb087]">
         <BsTelephoneFill className="w-5 h-5 duration-300  text-[#4cb087]"/>
-        </a> 
+        </Link> 
           <Link href="/"
            className="grid text-center duration-300 cursor-pointer w-9 place-content-center ">
             <BsWhatsapp className="w-6 h-6 duration-300 text-[#4cb087]"/>
@@ -213,9 +213,9 @@ const Card: React.FC<CardProps> = (
           {showMessage && (
         <div className="">
         <div className=" absolute inset-0  flex  items-center justify-center gap-x-6 bg-white/80 backdrop-blur-sm text-[25px] w-100 h-[200px] top-[300px] ">
-          <a href='/'><BiLogoFacebook/></a>
-          <a href='/'className=""><TbBrandTwitter/></a>
-          <a href='/'className=" "><BsWhatsapp/></a>
+          <Link href='/'><BiLogoFacebook/></Link>
+          <Link href='/'className=""><TbBrandTwitter/></Link>
+          <Link href='/'className=" "><BsWhatsapp/></Link>
           <button className=" ">
             <PiLinkSimpleBold/>
           </button>
